@@ -18,3 +18,14 @@ myTamagotchi.eatSnack()
 myTamagotchi.playGame()
 myTamagotchi.displayStats()
 
+//polymorphism demo
+let blueTamagotchi = Gen1Tamagotchi()
+let redTamagotchi = Gen2Tamagotchi(name: "Amber")
+let rainbowTamagotchi = Gen1Tamagotchi()
+
+var myTamagotchis: [Tamagotchi] = [blueTamagotchi, redTamagotchi, rainbowTamagotchi]
+
+for tamagotchi in myTamagotchis {
+    tamagotchi.playGame()
+}
+
