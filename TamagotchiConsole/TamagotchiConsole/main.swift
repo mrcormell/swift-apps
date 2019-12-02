@@ -8,5 +8,13 @@
 
 import Foundation
 
-print("Hello, World!")
+let myTamagotchi = Tamagotchi()
+
+print("The age of my tamagotchi is: \(myTamagotchi.age)")
+myTamagotchi.age = 10
+myTamagotchi.happy = 55
+myTamagotchi.eatMeal()
+myTamagotchi.eatSnack()
+myTamagotchi.playGame()
+myTamagotchi.displayStats()
 
