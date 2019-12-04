@@ -11,11 +11,15 @@ import UIKit
 class BuyViewController: UIViewController, Storyboarded {
 
     var coordinator: MainCoordinator?
+    var selectedProduct = 0
+    
+    @IBOutlet var productToBuy: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        productToBuy.text = "Buy: \(selectedProduct)"
     }
     
 

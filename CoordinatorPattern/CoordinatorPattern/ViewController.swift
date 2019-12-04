@@ -12,11 +12,12 @@ class ViewController: UIViewController, Storyboarded {
 
     var coordinator: MainCoordinator?
     
+    @IBOutlet var product: UISegmentedControl!
     @IBAction func createAccount(_ sender: Any) {
         coordinator?.createAccount()
     }
     @IBAction func buyTapped(_ sender: Any) {
-        coordinator?.buySubscription()
+        coordinator?.buySubscription(to: product.selectedSegmentIndex)
     }
     
     override func viewDidLoad() {
