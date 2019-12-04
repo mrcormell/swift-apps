@@ -18,11 +18,12 @@ class BuyViewController: UIViewController, Storyboarded {
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        coordinator?.didFinishBuying()
-        
-    }
+    //used in simple cases to handle going back
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//        coordinator?.didFinishBuying()
+//        
+//    }
     /*
     // MARK: - Navigation
 

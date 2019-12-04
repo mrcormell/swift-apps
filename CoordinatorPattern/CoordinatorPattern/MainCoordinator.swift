@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainCoordinator: Coordinator {
+class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     
@@ -19,6 +19,7 @@ class MainCoordinator: Coordinator {
     func start() {
         let vc = ViewController.instantiate()
         vc.coordinator = self
+        navigationController.delegate = self
         navigationController.pushViewController(vc, animated: false)
     }
     
@@ -41,6 +42,21 @@ class MainCoordinator: Coordinator {
                 childCoordinators.remove(at: index)
                 break
             }
+        }
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        guard let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from) else {
+            return
+        }
+        
+        //pushing another controller on time, so exit
+        if navigationController.viewControllers.contains(fromViewController) {
+            return
+        }
+        
+        if let buyViewController = fromViewController as? BuyViewController {
+            childDidFinish(buyViewController.coordinator)
         }
     }
 }

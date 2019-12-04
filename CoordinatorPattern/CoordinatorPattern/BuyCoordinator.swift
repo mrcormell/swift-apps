@@ -23,7 +23,8 @@ class BuyCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func didFinishBuying() {
-        parentCoordinator?.childDidFinish(self)
-    }
+    //used in simple cases to handle going back
+//    func didFinishBuying() {
+//        parentCoordinator?.childDidFinish(self)
+//    }
 }
