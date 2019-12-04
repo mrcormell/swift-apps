@@ -13,4 +13,5 @@ class Gen1Tamagotchi: Tamagotchi {
         print("Playing Gen1 Game")
         weight -= 1
     }
+
 }

@@ -63,5 +63,6 @@ class Tamagotchi {
         print("Happy (out of 4): \(happy)")
         print("----------------")
     }
+
 }
 
