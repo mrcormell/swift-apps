@@ -35,5 +35,15 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func buyProduct() {
+        let vc = ConfirmationViewController.instantiate()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func finished() {
+        navigationController.popToRootViewController(animated: true)
+    }
 
 }

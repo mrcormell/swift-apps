@@ -1,5 +1,5 @@
 //
-//  BuyViewController.swift
+//  ConfirmationViewController.swift
 //  CoordinatorPattern
 //
 //  Created by David Cormell on 04/12/2019.
@@ -8,22 +8,17 @@
 
 import UIKit
 
-class BuyViewController: UIViewController, Storyboarded {
-
+class ConfirmationViewController: UIViewController, Storyboarded {
     var coordinator: MainCoordinator?
-    var selectedProduct = 0
     
-    @IBOutlet var productToBuy: UILabel!
-    
-    @IBAction func buyProduct(_ sender: Any) {
-        coordinator?.buyProduct()
+    @IBAction func finished(_ sender: Any) {
+        coordinator?.finished()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        productToBuy.text = "Buy: \(selectedProduct)"
     }
     
 
