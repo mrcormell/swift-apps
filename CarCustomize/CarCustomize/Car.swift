@@ -8,20 +8,12 @@
 
 import Foundation
 
-class Car {
+struct Car {
     var make: String
     var model: String
     var topSpeed: Int
     var acceleration: Double
     var handling: Int
-    
-    init(make: String, model: String, topSpeed: Int, acceleration: Double, handling: Int) {
-        self.make = make
-        self.model = model
-        self.topSpeed = topSpeed
-        self.acceleration = acceleration
-        self.handling = handling
-    }
     
     func getStats() -> String {
         return """
