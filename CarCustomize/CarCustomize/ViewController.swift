@@ -20,14 +20,22 @@ class ViewController: UIViewController {
     var starterCars = StarterCars()
     var currentCar: Car?
     var remainingFunds = 1000
+    var currentCarIndex = 0 {
+        didSet(oldIndex) {
+            if oldIndex >= starterCars.cars.count - 1 {
+                currentCarIndex = 0
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        resetAndSelectRandomCar()
+        currentCar = starterCars.cars[currentCarIndex]
+        updateDisplay()
     }
     
     @IBAction func randomCar(_ sender: Any) {
-        resetAndSelectRandomCar()
+        resetAndNextCar()
     }
     
     @IBAction func toggleEngineExhaustPackage(_ sender: Any) {
@@ -76,9 +84,10 @@ class ViewController: UIViewController {
         updateDisplay()
     }
     
-    func resetAndSelectRandomCar() {
+    func resetAndNextCar() {
         remainingFunds = 1000
-        currentCar = starterCars.cars.randomElement()
+        currentCarIndex += 1
+        currentCar = starterCars.cars[currentCarIndex % starterCars.cars.count]
         engineExhaustPackage.setOn(false, animated: true)
         ecuFuelPackage.setOn(false, animated: true)
         tiresPackage.setOn(false, animated: true)
