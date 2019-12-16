@@ -16,10 +16,13 @@ class ViewController: UIViewController {
     @IBOutlet var ecuFuelPackage: UISwitch!
     @IBOutlet var tiresPackage: UISwitch!
     @IBOutlet var remainingFundsDisplay: UILabel!
+    @IBOutlet var remainingTimeDisplay: UILabel!
     
+    var timer: Timer?
     var starterCars = StarterCars()
     var currentCar: Car?
     var remainingFunds = 1000
+    var remainingTime = 30
     var currentCarIndex = 0 {
         didSet(oldIndex) {
             if oldIndex >= starterCars.cars.count - 1 {
@@ -31,7 +34,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         currentCar = starterCars.cars[currentCarIndex]
+        remainingTimeDisplay.text = "\(remainingTime)"
         updateDisplay()
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(countdown), userInfo: nil, repeats: true)
     }
     
     @IBAction func randomCar(_ sender: Any) {
@@ -113,6 +118,17 @@ class ViewController: UIViewController {
             tiresPackage.isEnabled = true
             driveTrainPackage.isEnabled = true
             ecuFuelPackage.isEnabled = true
+        }
+    }
+    
+    @objc func countdown() {
+        if remainingTime > 0 {
+            remainingTime -= 1
+            remainingTimeDisplay.text = "\(remainingTime)"
+        } else {
+            //do anything specific at end of timer, like move to another screen
+            //destroy the timer
+            timer?.invalidate()
         }
     }
 }
