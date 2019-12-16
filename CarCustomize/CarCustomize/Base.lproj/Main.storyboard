@@ -58,8 +58,8 @@
                                     <action selector="toggleDriveTrainPackage:" destination="BYZ-38-t0r" eventType="valueChanged" id="bip-kD-hJn"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tires Package" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d15-DJ-DFx">
-                                <rect key="frame" x="20" y="379" width="108" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tires Package (Cost: 500)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d15-DJ-DFx">
+                                <rect key="frame" x="20" y="379" width="200" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -86,6 +86,13 @@
                                     <action selector="toggleTiresPackage:" destination="BYZ-38-t0r" eventType="valueChanged" id="Nu8-Te-Vem"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8K-Zp-BPL">
+                                <rect key="frame" x="153" y="493" width="241" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -95,6 +102,7 @@
                         <outlet property="driveTrainPackage" destination="r9Q-eO-YJd" id="pMW-w9-LMk"/>
                         <outlet property="ecuFuelPackage" destination="WDY-45-uUC" id="E8h-Ge-mZd"/>
                         <outlet property="engineExhaustPackage" destination="ybO-ec-0LI" id="YVI-h1-xI3"/>
+                        <outlet property="remainingFundsDisplay" destination="H8K-Zp-BPL" id="gdu-fo-JeI"/>
                         <outlet property="tiresPackage" destination="Htf-LE-ftB" id="vNd-Nd-4DZ"/>
                     </connections>
                 </viewController>
