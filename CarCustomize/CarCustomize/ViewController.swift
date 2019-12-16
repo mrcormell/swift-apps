@@ -12,13 +12,21 @@ class ViewController: UIViewController {
     
     @IBOutlet var carStats: UILabel!
     
-    let currentCar: Car = Car(topSpeed: 125, acceleration: 7.7, handling: 5)
+    var starterCars = StarterCars()
+    var currentCar: Car?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        carStats.text = currentCar.getStats()
+        selectRandomCar()
     }
-
-
+    
+    @IBAction func randomCar(_ sender: Any) {
+        selectRandomCar()
+    }
+    
+    func selectRandomCar() {
+        currentCar = starterCars.cars.randomElement()
+        carStats.text = currentCar?.getStats()
+    }
 }
 
