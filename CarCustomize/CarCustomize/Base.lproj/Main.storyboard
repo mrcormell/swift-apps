@@ -23,9 +23,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpj-Ti-6d2">
-                                <rect key="frame" x="165" y="219" width="85" height="30"/>
+                                <rect key="frame" x="167" y="219" width="81" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Random Car"/>
+                                <state key="normal" title="Change Car"/>
                                 <connections>
                                     <action selector="randomCar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jyy-nr-8mD"/>
                                 </connections>
@@ -33,6 +33,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ybO-ec-0LI">
                                 <rect key="frame" x="347" y="282" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="engineExhaustPackage"/>
                                 <connections>
                                     <action selector="toggleEngineExhaustPackage:" destination="BYZ-38-t0r" eventType="valueChanged" id="gdV-PD-N1u"/>
                                 </connections>
@@ -54,6 +55,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r9Q-eO-YJd">
                                 <rect key="frame" x="347" y="329" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="driveTrainPackage"/>
                                 <connections>
                                     <action selector="toggleDriveTrainPackage:" destination="BYZ-38-t0r" eventType="valueChanged" id="bip-kD-hJn"/>
                                 </connections>
@@ -75,6 +77,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WDY-45-uUC">
                                 <rect key="frame" x="347" y="418" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="ecuFuelPackage"/>
                                 <connections>
                                     <action selector="toggleEcuFuelPackage:" destination="BYZ-38-t0r" eventType="valueChanged" id="YIz-69-8Ec"/>
                                 </connections>
@@ -82,6 +85,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Htf-LE-ftB">
                                 <rect key="frame" x="347" y="374" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tiresPackage"/>
                                 <connections>
                                     <action selector="toggleTiresPackage:" destination="BYZ-38-t0r" eventType="valueChanged" id="Nu8-Te-Vem"/>
                                 </connections>
