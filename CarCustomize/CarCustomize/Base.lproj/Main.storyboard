@@ -117,6 +117,13 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bl-xj-FS0">
+                                <rect key="frame" x="0.0" y="490" width="414" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -141,6 +148,7 @@
                         <outlet property="engineExhaustPackage" destination="ybO-ec-0LI" id="YVI-h1-xI3"/>
                         <outlet property="remainingFundsDisplay" destination="H8K-Zp-BPL" id="gdu-fo-JeI"/>
                         <outlet property="remainingTimeDisplay" destination="cmY-DV-uig" id="SB3-sR-Jsx"/>
+                        <outlet property="testLabel" destination="2Bl-xj-FS0" id="3Nz-oX-eFG"/>
                         <outlet property="tiresPackage" destination="Htf-LE-ftB" id="vNd-Nd-4DZ"/>
                     </connections>
                 </viewController>

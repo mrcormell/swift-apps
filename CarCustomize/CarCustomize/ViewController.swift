@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet var tiresPackage: UISwitch!
     @IBOutlet var remainingFundsDisplay: UILabel!
     @IBOutlet var remainingTimeDisplay: UILabel!
+    @IBOutlet var testLabel: UILabel!
     
     var timer: Timer?
     var starterCars = StarterCars()
@@ -33,6 +34,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        testLabel.text = "supercalafragalisticexpialidocious"
         currentCar = starterCars.cars[currentCarIndex]
         remainingTimeDisplay.text = "\(remainingTime)"
         updateDisplay()
